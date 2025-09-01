@@ -3,7 +3,7 @@ import { Program } from "@coral-xyz/anchor";
 import fs from 'fs';
 import NodeWallet from "@coral-xyz/anchor/dist/cjs/nodewallet";
 import {  Keypair, PublicKey, SystemProgram } from "@solana/web3.js";
-import {  getAssociatedTokenAddress, getOrCreateAssociatedTokenAccount, NATIVE_MINT, TOKEN_PROGRAM_ID } from "@solana/spl-token";
+import {  getAssociatedTokenAddress, getOrCreateAssociatedTokenAccount, NATIVE_MINT } from "@solana/spl-token";
 
 describe("marinadestaking", () => {
     // Configure the client to use the local cluster.

@@ -3,7 +3,6 @@ import {  TOKEN_PROGRAM_ID, createInitializeMintInstruction,  MINT_SIZE, createA
 import { PublicKey, Keypair, SystemProgram, Transaction, sendAndConfirmTransaction } from "@solana/web3.js";
 import * as anchor from "@coral-xyz/anchor";
 import * as mpl from "@metaplex-foundation/mpl-token-metadata";
-import { randomBytes } from "crypto";
 import bs58 from "bs58";
 function generateSolanaAddressWithLength(targetLength: number): [PublicKey, Keypair] {
   let tokenMint: PublicKey;
@@ -34,7 +33,6 @@ export async function createTokenWithMetadata(
   const connection = provider.connection;
   
 const METADATA_PROGRAM_ID = new PublicKey("metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s")
-  // const mintKeypair = Keypair.generate();
   const [tokenMint, mintKeypair] = generateSolanaAddressWithLength(43);
   
   const tokenATA = getAssociatedTokenAddressSync(tokenMint, payer.publicKey);
