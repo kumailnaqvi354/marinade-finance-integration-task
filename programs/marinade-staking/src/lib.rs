@@ -8,7 +8,7 @@ use anchor_lang::prelude::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("B3hvpW8zM64Kb8Ud5eoGA2UBQgf4nZ18EEfbqZNXYD1b");
+declare_id!("8dDbAnutWwbwAB5PhxPLcSCaxBCm4x6bD7o3VJyQ8DSp");
 
 #[program]
 pub mod marinadestaking {
